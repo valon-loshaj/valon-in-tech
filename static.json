@@ -1,9 +1,0 @@
-{
-    "root": "pages/",
-    "clean_urls": true,
-    "routes": {
-        "/": "home.html",
-        "/about-me": "about-me.html",
-        "/contact-me": "contact-me.html"
-    }
-}
