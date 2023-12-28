@@ -9,21 +9,19 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-    <!-- Navigation Panel -->
-    <button id="menuButton">☰</button>
-    <nav>
-        <ul id="menu">
-            <li><a href="/index.html">Welcome!</a></li>
-            <li><a href="/pages/about-me.html">About Me</a></li>
-            <li><a href="/pages/contact-me.html">Contact Information</a></li>
-        </ul>
-    </nav>
-    <!-- Homepage with Introduction -->
+    <!-- Homepage with Introduction and main navigation elements-->
     <section id="homepage">
-        <h1>Welcome!</h1>
         <img class="profile-picture" src="../assets/profile-picture.jpeg" alt="Valon Loshaj Profile Picture" profile-picture>
-        <p>Hey there! I'm a software engineering enthusiast and architecture aficionado, currently designing, building and shipping technical solutions for our clients at Accenture. 
+        <h1>Welcome!</h1>
+    </section>
+    <section id="homepage-welcome">
+        <p>Hey there! I'm a software engineering enthusiast and architecture aficionado, currently designing, building and shipping technical 
+            solutions for our clients at Accenture. 
         </p>
+        <div class="vertical-elements">
+            <a href="about-me.html" id="about-me"><h3>About Me</h3></a>
+            <a href="contact-me.html" id="contact-me"><h3>Contact Me</h3></a>
+        </div>
     </section>
     <script src="../js/script.js"></script>
 </body>

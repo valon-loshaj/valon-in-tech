@@ -4,59 +4,105 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
+    font-family: 'Monaco';
     justify-content: center;
     margin: 0 auto;
     max-width: 800px;
     padding: 20px;
+    transition: background-color 0.5s;
+    width: 100%;
 }
-#menuButton {
-    cursor: pointer;
+
+body.about-me-hover {
+    background-color: #31bc31;
+}
+
+body.contact-me-hover {
+    background-color: #ce7f18;
+}
+
+#homepage {
+    display: flex;
+    align-items: center;
+}
+
+.menu-hidden {
     display: none;
 }
-nav ul {
+
+.menu-shown {
     display: flex;
+    margin-block: 0;
+}
+
+#menuButton {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+    width: 2rem;
+}
+
+#menuButton div {
+    height: 0.25rem;
+    background-color: #000; /* Change this to the color you want for the lines */
+    width: 100%;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column; /* Change the direction of the list items to column */
     justify-content: space-between;
     list-style-type: none;
+    margin-block: 0;
     padding: 0;
+    width: 100%;
 }
+
 nav ul li {
     align-items: center;
-    background-color: #004800; /* forest green */
-    display: flex;
+    background-color: #127612; /* forest green */
+    display: list-item;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
     flex: 1;
     font-weight: bold;
     justify-content: center;
-    margin: 10px;
-    padding: 20px;
+    margin: .5rem;
+    padding: .5rem;
     text-align: center;
+    width: calc(37rem - 1rem);
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 .profile-picture {
     height: 9rem;
     width: 9rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+    justify-content: flex-start;
 }
+
 section {
     max-width: 600px;
     text-align: center;
     width: 100%;
 }
-@media (max-width: 600px) {
-    #menuButton {
-        display: block;
-    }
-    nav ul {
-        display: none;
-        flex-direction: column;
-    }
-    nav ul.active {
-        display: block;
-    }
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
+
+.vertical-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Monaco';
+    font-size: 3rem;
+}
+
+.vertical-elements a {
+    color: transparent;
+    text-decoration: none;
+    -webkit-text-stroke: 1px black;
 }
