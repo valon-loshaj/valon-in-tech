@@ -1,1 +1,1 @@
-web: config/nginx.conf.erb
+web: bin/start-nginx-solo
