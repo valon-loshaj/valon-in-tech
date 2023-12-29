@@ -13,6 +13,18 @@ window.onload = function() {
     });
 
     // Add an event listener for the 'mouseover' event on the 'contact-me' element
+    document.getElementById('portfolio').addEventListener('mouseover', function() {
+        // Change the background color of the body to '#003500' when the 'contact-me' element is hovered over
+        document.body.classList.add('portfolio-hover');
+    });
+
+    // Add an event listener for the 'mouseout' event on the 'about-me' element
+    document.getElementById('portfolio').addEventListener('mouseout', function() {
+        // Reset the background color of the body when the mouse is no longer hovering over the 'about-me' element
+        document.body.classList.remove('portfolio-hover');
+    });
+
+    // Add an event listener for the 'mouseover' event on the 'contact-me' element
     document.getElementById('contact-me').addEventListener('mouseover', function() {
         // Change the background color of the body to '#003500' when the 'contact-me' element is hovered over
         document.body.classList.add('contact-me-hover');

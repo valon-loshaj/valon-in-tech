@@ -21,6 +21,10 @@ body.contact-me-hover {
     background-color: #ce7f18;
 }
 
+body.portfolio-hover {
+    background-color: #e8d90b;
+}
+
 #homepage {
     display: flex;
     align-items: center;
@@ -98,7 +102,7 @@ section {
     flex-direction: column;
     align-items: flex-start;
     font-family: 'Monaco';
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .vertical-elements a {
