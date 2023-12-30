@@ -25,6 +25,18 @@ body.portfolio-hover {
     background-color: #e8d90b;
 }
 
+body.blog-hover {
+    background-color: #41574a;
+}
+
+h2 {
+    color: transparent;
+    font-family: 'Monaco';
+    font-size: 2rem;
+    text-decoration: none;
+    -webkit-text-stroke: 1px black;
+}
+
 #homepage {
     display: flex;
     align-items: center;
@@ -66,14 +78,14 @@ nav ul {
 
 nav ul li {
     align-items: center;
-    background-color: #127612; /* forest green */
+    background-color: #8b8b8b;
     display: list-item;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     flex: 1;
     font-weight: bold;
     justify-content: center;
-    margin: .5rem;
-    padding: .5rem;
+    margin: 1px;
+    padding: 1px;
     text-align: center;
     width: calc(37rem - 1rem);
 }
@@ -83,6 +95,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+.small-logo-image {
+    width: 5%;
+    height: auto;
+}
 .profile-picture {
     height: 9rem;
     width: 9rem;
@@ -95,6 +111,11 @@ section {
     max-width: 600px;
     text-align: center;
     width: 100%;
+}
+
+section a {
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .vertical-elements {
