@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    font-family: 'Monaco';
+    font-family: Inter,sans-serif;
     justify-content: center;
     margin: 0 auto;
     max-width: 800px;
@@ -31,10 +31,14 @@ body.blog-hover {
 
 h2 {
     color: transparent;
-    font-family: 'Monaco';
+    font-family: Inter,sans-serif;
     font-size: 2rem;
     text-decoration: none;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1.5px black;
+}
+
+h3 {
+    margin-bottom: 2rem;
 }
 
 #homepage {
@@ -92,6 +96,9 @@ nav ul li {
 
 nav ul li a {
     color: white;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
     text-decoration: none;
 }
 
@@ -118,16 +125,34 @@ section a {
     margin-bottom: 1rem;
 }
 
-.vertical-elements {
+#title-header {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+#title-header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#title-header h3 {
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-elements {
     align-items: flex-start;
-    font-family: 'Monaco';
+    display: flex;
+    flex-direction: column;
+    font-family: Inter,sans-serif;
     font-size: 2rem;
 }
 
 .vertical-elements a {
     color: transparent;
     text-decoration: none;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1.5px black;
 }
