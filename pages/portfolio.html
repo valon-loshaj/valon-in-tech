@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Portfolio</title>
-    <!-- Add a Content Security Policy that only allows content from the same origin -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-    <!-- Add viewport meta tag to ensure proper rendering on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Portfolio</title>
+	<!-- Add a Content Security Policy that only allows content from the same origin -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+	<!-- Add viewport meta tag to ensure proper rendering on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
+
 <body>
-    <!-- Navigation Panel -->
-    <div id="menuButton">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <nav>
-        <ul class="menu-hidden" id="menu">
-            <li><a href="/">Welcome!</a></li>
-            <li><a href="/pages/about-me.html">About Me</a></li>
-            <li><a href="/pages/portfolio.html">Projects</a></li>
-            <li><a href="/pages/blog.html">Blog</a></li>
-            <li><a href="/pages/contact-me.html">Contact Me</a></li>
-        </ul>
-    </nav>
-    <!-- Contact Information -->
-    <section id="portfolio-section">
-        <h2>My Projects</h2>
-        <h3>Under Construction! Coming Soon!</h3>
-        <img src="../assets/under-construction.png" alt="Under Construction">
-        <!-- <a href="your-github-profile-url">GitHub</a> -->
-    </section>
-    <script src="../js/script.js"></script>
+	<!-- Navigation Panel -->
+	<div id="menuButton">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<nav>
+		<ul class="menu-hidden" id="menu">
+			<li><a href="/">Home</a></li>
+			<li><a href="/pages/about-me.html">About Me</a></li>
+			<li><a href="/pages/portfolio.html">Projects</a></li>
+			<li><a href="/pages/blog.html">Blog</a></li>
+			<li><a href="/pages/contact-me.html">Contact Me</a></li>
+		</ul>
+	</nav>
+	<!-- Section for Projects -->
+	<h2>My Projects</h2>
+	<p class="project-details">Here are a few projects that I've hacked on. Feel free to check them out, or use the
+		link to my GitHub for each
+		project to take a look at the code.
+	</p>
+	<div class="project-card">
+		<img src="../assets/js-workshop-logo.png" alt="JS Craftsman's Workshop Logo" class="project-image">
+		<div class="project-details">
+			<h2 class="project-title">The JS Craftsman's Workshop</h2>
+			<p class="project-description">This is a brief description of the project.</p>
+			<a href="https://github.com/valon-loshaj/js-craftsman-workshop" class="project-link" target="_blank">
+				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				JS Craftsman's Workshop on GitHub
+			</a>
+			<a href="https://projects.valonintech.dev/jscraftsmansworkshop" class="project-link">Check out the JS
+				Craftsman's Workshop →</a>
+		</div>
+	</div>
+	<script src="../js/script.js"></script>
 </body>
+
 </html>
