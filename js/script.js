@@ -90,8 +90,11 @@ window.onload = function () {
 					menu.classList.add("menu-hidden");
 				}
 			};
-			menuButton.addEventListener("click", toggleMenu);
-			menuButton.addEventListener("touchstart", toggleMenu);
+			if (!("ontouchstart" in window)) {
+				menuButton.addEventListener("click", toggleMenu);
+			} else {
+				menuButton.addEventListener("touchstart", toggleMenu);
+			}
 		}
 	}
 };
