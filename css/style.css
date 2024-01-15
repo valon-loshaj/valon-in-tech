@@ -161,6 +161,7 @@ nav ul li a {
 }
 
 section {
+	display: block;
 	max-width: 600px;
 	text-align: center;
 	width: 100%;
