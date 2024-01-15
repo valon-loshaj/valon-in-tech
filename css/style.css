@@ -76,7 +76,7 @@ h3 {
 	width: 100%;
 }
 
-#menuButton:hover {
+#menuButton.rotate {
 	transform: rotate(90deg);
 }
 
