@@ -2,6 +2,13 @@
 <html>
 
 <head>
+	<script>
+		// Immediately set theme before any content loads
+		(function() {
+			const theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.setAttribute('data-theme', theme);
+		})();
+	</script>
 	<title>Welcome to Valon Loshaj's Personal Website!</title>
 	<!-- Add a Content Security Policy that only allows content from the same origin -->
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
@@ -9,11 +16,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="assets/vl-logo.png" type="image/x-icon">
-	<script>
-		// Immediately apply the saved theme to prevent flicker
-		const savedTheme = localStorage.getItem('theme') || 'light';
-		document.documentElement.setAttribute('data-theme', savedTheme);
-	</script>
 </head>
 
 <body>
