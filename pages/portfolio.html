@@ -9,6 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../assets/vl-logo.png" type="image/x-icon">
+	<script>
+		// Immediately apply the saved theme to prevent flicker
+		const savedTheme = localStorage.getItem('theme') || 'light';
+		document.documentElement.setAttribute('data-theme', savedTheme);
+	</script>
 </head>
 
 <body>
@@ -18,47 +23,98 @@
 		<div></div>
 		<div></div>
 	</div>
+	<button id="themeToggle" aria-label="Toggle dark mode">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+		</svg>
+	</button>
 	<nav>
 		<ul class="menu-hidden" id="menu">
 			<li><a href="/">Home</a></li>
 			<li><a href="/pages/about-me.html">About Me</a></li>
 			<li><a href="/pages/portfolio.html">Projects</a></li>
 			<li><a href="https://blog.valonintech.dev">Blog</a></li>
-			<li><a href="/pages/contact-me.html">Contact Me</a></li>
 		</ul>
 	</nav>
 	<!-- Section for Projects -->
 	<h2>My Projects</h2>
 	<p class="project-details">Here are a few projects that I've hacked on. Feel free to check them out, or use the
-		link to my GitHub for each
-		project to take a look at the code.
+		link to my GitHub for each project to take a look at the code.
 	</p>
+	<div class="project-card">
+		<img src="../assets/compiler-blog.jpg" alt="Compiler Blog Logo" class="project-image">
+		<div class="project-details">
+			<h2 class="project-title">The .compiler Blog</h2>
+			<p class="project-description">My personal tech blog where I share insights about software development, architecture, and lessons learned from building various projects.</p>
+			<a href="https://github.com/valon-loshaj/compiler-blog" class="project-link" target="_blank">
+				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				The .compiler Blog on GitHub
+			</a>
+			<a href="https://blog.valonintech.dev" class="project-link">
+				Read the Blog →
+			</a>
+		</div>
+	</div>
+	<div class="project-card">
+		<img src="../assets/utter-sense.jpeg" alt="Utter Sense Logo" class="project-image">
+		<div class="project-details">
+			<h2 class="project-title">Utter Sense</h2>
+			<p class="project-description">A real-time intelligence tool that listens to voice calls, using cutting-edge vector search to match agent conversations with relevant knowledge articles. Empowers agents with instant, context-aware recommendations for smarter, faster resolutions.</p>
+			<a href="https://github.com/valon-loshaj/utter-sense" class="project-link" target="_blank">
+				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				Utter Sense on GitHub
+			</a>
+		</div>
+	</div>
+	<div class="project-card">
+		<img src="../assets/side-quest.jpeg" alt="Side Quest Logo" class="project-image">
+		<div class="project-details">
+			<h2 class="project-title">Side Quest</h2>
+			<p class="project-description">A task management application with an RPG twist, inspired by nostalgic games. Built with modern web technologies including Next.js, Prisma ORM, and PostgreSQL.</p>
+			<a href="https://github.com/valon-loshaj/side-quest" class="project-link" target="_blank">
+				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				Side Quest on GitHub
+			</a>
+		</div>
+	</div>
 	<div class="project-card">
 		<img src="../assets/js-workshop-logo.png" alt="JS Craftsman's Workshop Logo" class="project-image">
 		<div class="project-details">
 			<h2 class="project-title">The JS Craftsman's Workshop</h2>
-			<p class="project-description">This is a brief description of the project.</p>
+			<p class="project-description">An interactive platform for learning JavaScript through hands-on exercises and real-world projects. Features live coding environments and immediate feedback.</p>
 			<a href="https://github.com/valon-loshaj/js-craftsman-workshop" class="project-link" target="_blank">
 				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
 				JS Craftsman's Workshop on GitHub
 			</a>
-			<a href="https://projects.valonintech.dev/jsCraftsmansWorkshop" class="project-link">Check out the JS
-				Craftsman's Workshop →</a>
+			<a href="https://projects.valonintech.dev/jsCraftsmansWorkshop" class="project-link">
+				Check out the Workshop →
+			</a>
 		</div>
 	</div>
 	<div class="project-card">
-		<img src="../assets/vl-logo.png" alt="Compiler Blog Logo" class="project-image">
+		<img src="../assets/vl-logo.png" alt="Create SF App Logo" class="project-image">
 		<div class="project-details">
-			<h2 class="project-title">The .compiler Blog</h2>
-			<p class="project-description">This is my personal blog.</p>
-			<a href="https://github.com/valon-loshaj/compiler-blog" class="project-link" target="_blank">
+			<h2 class="project-title">Create SF App</h2>
+			<p class="project-description">A CLI tool for bootstrapping Salesforce applications with modern development practices and tooling preconfigured. Streamlines the setup of new Salesforce projects.</p>
+			<a href="https://github.com/valon-loshaj/create-sf-app" class="project-link" target="_blank">
 				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
-				The .compiler Blog
+				Create SF App on GitHub
 			</a>
-			<a href="https://blog.valonintech.dev" class="project-link">Check out the .compiler
-				blog →</a>
 		</div>
 	</div>
+	<footer>
+		<h3>Connect With Me</h3>
+		<div class="footer-links">
+			<a href="https://www.linkedin.com/in/valon-loshaj-5496861a7/" target="_blank">
+				<img src="../assets/LinkedIn_icon.svg" alt="LinkedIn Logo" class="small-logo-image">
+				LinkedIn
+			</a>
+			<a href="https://github.com/valon-loshaj" target="_blank">
+				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				GitHub
+			</a>
+		</div>
+	</footer>
 	<script src="../js/script.js"></script>
 </body>
 

@@ -9,6 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="../assets/vl-logo.png" type="image/x-icon">
+	<script>
+		// Immediately apply the saved theme to prevent flicker
+		const savedTheme = localStorage.getItem('theme') || 'light';
+		document.documentElement.setAttribute('data-theme', savedTheme);
+	</script>
 </head>
 
 <body>
@@ -18,55 +23,51 @@
 		<div></div>
 		<div></div>
 	</div>
+	<button id="themeToggle" aria-label="Toggle dark mode">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+		</svg>
+	</button>
 	<nav>
 		<ul class="menu-hidden" id="menu">
 			<li><a href="/">Home</a></li>
 			<li><a href="/pages/about-me.html">About Me</a></li>
 			<li><a href="/pages/portfolio.html">Projects</a></li>
 			<li><a href="https://blog.valonintech.dev">Blog</a></li>
-			<li><a href="/pages/contact-me.html">Contact Me</a></li>
 		</ul>
 	</nav>
 	<!-- About Me Section -->
 	<section id="about-me-section">
 		<h2>About Me</h2>
 		<p>
-			Since February 2021, I've been diving deep into the world of designing large-scale enterprise applications,
-			focusing on creating seamless and efficient solutions that make a real difference.
-			At the heart of my approach is a blend of technical mastery and creative problem-solving. I've had the
-			privilege of building end-to-end user experiences and high-performance APIs, always with
-			an eye on scalability, reliability, and user satisfaction. My time in tech consulting has solidified my
-			skills in systems design, object-oriented programming, and the art of crafting
-			impactful, quality-driven software solutions. Over the years I've worked on varying tech stacks across
-			multiple industries including retail, telecommunications, hospitality, and more recently
-			in health and life sciences.
+			Hey there!  👋 I'm Valon, a software developer with a passion for building software applications that are both powerful and user-friendly. I love the challenge of taking complex problems and crafting elegant solutions, and I'm always eager to learn new technologies and expand my skillset.
 		</p>
 		<p>
-			A bit about me beyond the screen? Originating from Eastern Europe and raised in the amazing city of NYC, my
-			fascination with technology began early, sparked by my first foray into programming
-			with a simple BASIC-coded game in middle school. When I'm not immersed in the tech world, I'm an avid hiker,
-			traveler, reader, and a budding woodworker. These hobbies offer me a refreshing
-			escape, providing balance and inspiration for my professional endeavors.
+			My journey into tech was a bit unconventional.  I actually started out in hospitality and then retail, but my fascination with technology eventually led me to the world of software development. Thinking back to when I write my first lines of code in middle school to build a small catapult game...Yeah, that was the beginning of it all! 😄.  I'm mostly self-taught, which has given me a unique perspective and a deep appreciation for the power of continuous learning.
 		</p>
 		<p>
-			My journey into tech was a bit unconventional, transitioning into tech without a formal CS degree. My
-			knowledge of coding and software architecture came from a ton of self learning and great
-			self-paced learning resources. I'm a 19X Certified Salesforce Technical Architect, with certifications like
-			Salesforce Certified Platform Developer I and II, and Salesforce Certified
-			JavaScript Developer under my belt. Additionally, I hold MuleSoft Certified Platform Architect (MCPS) and
-			Developer (MCPD) certifications.
+			I've spent the last few years immersed in the world of designing and building enterprise applications, focusing on creating seamless and efficient solutions that make a real difference. I've had the privilege of working on everything from end-to-end user experiences to high-performance APIs, always with an eye on scalability, reliability, and user satisfaction.  My experience in tech consulting has allowed me to hone my skills in systems design, object-oriented programming, and crafting impactful, quality-driven software solutions across a variety of industries, including retail, telecommunications, hospitality, and health and life sciences.
 		</p>
 		<p>
-			I believe in the power of collaboration, effective communication, and a kind-hearted approach to both
-			professional and personal interactions. Driven by a passion for technology and a
-			commitment to continuous learning and improvement, I'm always excited to connect with like-minded
-			individuals and explore new horizons in the ever-evolving tech landscape.
+			Outside of the technical stuff, when I'm not glued to my computer, you can find me exploring the great outdoors, getting lost in a good book, or trying my hand at woodworking (with varying degrees of success!).  I'm also a big fan of travel and experiencing new cultures.  ✈️
 		</p>
 		<p>
-			Feel free to reach out! Let's exchange ideas about the latest in software development, share our favorite
-			travel stories, or discuss the joys of getting our hands dirty with a new hobby.
+			I'm a big believer in collaboration, open communication, and a kind-hearted approach to everything I do.  If you're interested in the latest in software development, want to swap travel stories, or just chat about the joys (and frustrations!) of woodworking, feel free to reach out!  I'm always excited to connect with fellow tech enthusiasts and learn from others.
 		</p>
 	</section>
+	<footer>
+		<h3>Connect With Me</h3>
+		<div class="footer-links">
+			<a href="https://www.linkedin.com/in/valon-loshaj-5496861a7/" target="_blank">
+				<img src="../assets/LinkedIn_icon.svg" alt="LinkedIn Logo" class="small-logo-image">
+				LinkedIn
+			</a>
+			<a href="https://github.com/valon-loshaj" target="_blank">
+				<img src="../assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				GitHub
+			</a>
+		</div>
+	</footer>
 	<script src="../js/script.js"></script>
 </body>
 

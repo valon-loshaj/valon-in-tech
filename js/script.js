@@ -1,96 +1,69 @@
 // This function will run once the entire page has been loaded
 window.onload = function () {
-	// Check if the device is a touch device
-	// Add an event listener for the 'mouseover' event on the 'about-me' element
-	var aboutMe = document.getElementById("about-me");
-	if (aboutMe) {
-		document
-			.getElementById("about-me")
-			.addEventListener("mouseover", function () {
-				// Change the background color of the body to '#31bc31' when the 'about-me' element is hovered over
-				document.body.classList.add("about-me-hover");
-			});
-		// Add an event listener for the 'mouseout' event on the 'about-me' element
-		document
-			.getElementById("about-me")
-			.addEventListener("mouseout", function () {
-				// Reset the background color of the body when the mouse is no longer hovering over the 'about-me' element
-				document.body.classList.remove("about-me-hover");
-			});
+	// Theme switching functionality
+	const themeToggle = document.getElementById('themeToggle');
+	if (themeToggle) {
+		// Check for saved theme preference or default to 'light'
+		const savedTheme = localStorage.getItem('theme') || 'light';
+		document.documentElement.setAttribute('data-theme', savedTheme);
+		updateThemeIcon(savedTheme);
+		
+		themeToggle.addEventListener('click', () => {
+			const currentTheme = document.documentElement.getAttribute('data-theme');
+			const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+			
+			document.documentElement.setAttribute('data-theme', newTheme);
+			localStorage.setItem('theme', newTheme);
+			updateThemeIcon(newTheme);
+		});
 	}
 
-	// Add an event listener for the 'mouseover' event on the 'contact-me' element
-	var portfolio = document.getElementById("portfolio");
-	if (portfolio) {
-		document
-			.getElementById("portfolio")
-			.addEventListener("mouseover", function () {
-				// Change the background color of the body to '#e8d90b' when the 'contact-me' element is hovered over
-				document.body.classList.add("portfolio-hover");
-			});
-
-		// Add an event listener for the 'mouseout' event on the 'about-me' element
-		document
-			.getElementById("portfolio")
-			.addEventListener("mouseout", function () {
-				// Reset the background color of the body when the mouse is no longer hovering over the 'about-me' element
-				document.body.classList.remove("portfolio-hover");
-			});
-	}
-
-	// Add an event listener for the 'mouseover' event on the 'blog' element
-	var blog = document.getElementById("blog");
-	if (blog) {
-		document
-			.getElementById("blog")
-			.addEventListener("mouseover", function () {
-				// Change the background color of the body to '#41574a' when the 'contact-me' element is hovered over
-				document.body.classList.add("blog-hover");
-			});
-
-		// Add an event listener for the 'mouseout' event on the 'blog' element
-		document
-			.getElementById("blog")
-			.addEventListener("mouseout", function () {
-				// Reset the background color of the body when the mouse is no longer hovering over the 'contact-me' element
-				document.body.classList.remove("blog-hover");
-			});
-	}
-
-	// Add an event listener for the 'mouseover' event on the 'contact-me' element
-	var contactMe = document.getElementById("contact-me");
-	if (contactMe) {
-		document
-			.getElementById("contact-me")
-			.addEventListener("mouseover", function () {
-				// Change the background color of the body to '#ce7f18' when the 'contact-me' element is hovered over
-				document.body.classList.add("contact-me-hover");
-			});
-
-		// Add an event listener for the 'mouseout' event on the 'contact-me' element
-		document
-			.getElementById("contact-me")
-			.addEventListener("mouseout", function () {
-				// Reset the background color of the body when the mouse is no longer hovering over the 'contact-me' element
-				document.body.classList.remove("contact-me-hover");
-			});
-	}
-
-	// Add an event listener for the 'click' event on the 'menuButton' hamburger icon element
+	// Menu functionality
 	var menuButton = document.getElementById("menuButton");
 	if (menuButton) {
 		var toggleMenu = function () {
 			var menu = document.getElementById("menu");
+			
+			// Toggle menu visibility with animation
 			if (menu.classList.contains("menu-hidden")) {
-				menu.classList.remove("menu-hidden");
-				menu.classList.add("menu-shown");
-				menuButton.classList.add("rotate");
+				menu.style.display = "flex";  // Show menu first
+				requestAnimationFrame(() => {  // Wait for next frame to start transition
+					menu.classList.remove("menu-hidden");
+					menu.classList.add("menu-shown");
+					menuButton.classList.add("rotate");
+				});
 			} else {
 				menu.classList.remove("menu-shown");
 				menu.classList.add("menu-hidden");
 				menuButton.classList.remove("rotate");
+				
+				// Wait for transition to finish before hiding menu
+				setTimeout(() => {
+					if (menu.classList.contains("menu-hidden")) {
+						menu.style.display = "none";
+					}
+				}, 300); // Match this with your CSS transition time
 			}
 		};
+		
 		menuButton.addEventListener("click", toggleMenu);
+		
+		// Close menu when clicking outside
+		document.addEventListener("click", function(event) {
+			var menu = document.getElementById("menu");
+			if (!menuButton.contains(event.target) && !menu.contains(event.target) && menu.classList.contains("menu-shown")) {
+				toggleMenu();
+			}
+		});
 	}
 };
+
+// Helper function to update theme icon
+function updateThemeIcon(theme) {
+	const themeToggle = document.getElementById('themeToggle');
+	if (themeToggle) {
+		themeToggle.innerHTML = theme === 'light' 
+			? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>'
+			: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+	}
+}
