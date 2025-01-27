@@ -9,16 +9,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" href="assets/vl-logo.png" type="image/x-icon">
+	<script>
+		// Immediately apply the saved theme to prevent flicker
+		const savedTheme = localStorage.getItem('theme') || 'light';
+		document.documentElement.setAttribute('data-theme', savedTheme);
+	</script>
 </head>
 
 <body>
 	<!-- Homepage with Introduction and main navigation elements-->
+	<button id="themeToggle" aria-label="Toggle dark mode">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+		</svg>
+	</button>
 	<section id="homepage">
 		<img class="profile-picture" src="../assets/profile-picture.jpeg" alt="Valon Loshaj Profile Picture"
 			profile-picture>
 		<div id="title-header">
 			<h1>Valon Loshaj</h1>
-			<h3>Software Architect</h3>
+			<h3>Software Developer</h3>
 		</div>
 	</section>
 	<section id="homepage-welcome">
@@ -36,11 +46,21 @@
 			<a href="https://blog.valonintech.dev" id="blog">
 				<h3>Blog</h3>
 			</a>
-			<a href="../pages/contact-me.html" id="contact-me">
-				<h3>Contact Me</h3>
-			</a>
 		</div>
 	</section>
+	<footer>
+		<h3>Connect With Me</h3>
+		<div class="footer-links">
+			<a href="https://www.linkedin.com/in/valon-loshaj-5496861a7/" target="_blank">
+				<img src="assets/LinkedIn_icon.svg" alt="LinkedIn Logo" class="small-logo-image">
+				LinkedIn
+			</a>
+			<a href="https://github.com/valon-loshaj" target="_blank">
+				<img src="assets/github-logo.svg.png" alt="GitHub Logo" class="small-logo-image">
+				GitHub
+			</a>
+		</div>
+	</footer>
 	<script src="../js/script.js"></script>
 </body>
 
