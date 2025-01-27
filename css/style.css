@@ -421,3 +421,7 @@ footer {
 [data-theme="dark"] h2 {
 	-webkit-text-stroke: 1.5px #bdc3c7;
 }
+
+[data-theme="dark"] .vertical-elements a {
+	color: #bdc3c7;
+}
